@@ -16,7 +16,7 @@ def architecture():
 # Default DLL path
 
 _A_PREFIX = "x86" if architecture == 32 else "x64"
-_DEFAULT_DLL_PATH = Path(".") / _A_PREFIX / "PriorScientificSDK.dll" 
+_DEFAULT_DLL_PATH = Path(".") / "prior" / _A_PREFIX / "PriorScientificSDK.dll" 
 
 T = TypeVar('T')
 class PriorController:
