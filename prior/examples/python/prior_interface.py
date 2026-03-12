@@ -24,7 +24,7 @@ from ctypes import WinDLL, create_string_buffer
 import os
 import sys
 
-path = "PriorScientificSDK.dll"
+path = r"C:\Users\ladmin\Desktop\Image-Tiling-mkI\prior\x64\PriorScientificSDK.dll"
 
 if os.path.exists(path):
     SDKPrior = WinDLL(path)
@@ -32,7 +32,7 @@ else:
     raise RuntimeError("DLL could not be loaded.")
 
 rx = create_string_buffer(1000)
-realhw = False
+realhw = True
 
 
 def cmd(msg):
