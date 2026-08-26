@@ -22,14 +22,14 @@ def _():
     # --- CONFIGURATION ---
     width = 1000    # Scan width in um
     height = 1000   # scan height in um
-    step = 25      # step size in um
+    step = 250      # step size in um
     stage_com = 3   # Which COM port is the prior stage?
 
-    # HDR SETTINGS
-    exposure_times = [0.015, 0.030, 0.060, 0.120, 0.240] 
-    pixel_gain = 255
+    # EXPOSURE SETTINGS
+    exposure_time = 0.020  # Single exposure time in seconds
+    pixel_gain = 0
 
-    write_dir = Path("./scans/04_28_26/blue/bio_noDOE/")
+    write_dir = Path("C:/Users/ladmin/OneDrive - University of Utah/grad school/research/Super-Res/Data/06_19_26/Drift_Test/scan/")
     write_dir.mkdir(exist_ok=True, parents=True)
     name_prefix = "custom_"
     dark_frame = tiffile.imread("dark_frame.tiff")
@@ -46,15 +46,13 @@ def _():
 
         if maxv - minv == 0:
             print("I am skipping normalization")
-            return np.zeros(image.shape(), dtype=np.uint16)
 
         norm = (image - minv) / (maxv - minv)
         norm = norm * 255
         norm = norm.astype(np.uint16)
-        return norm
 
     def main():
-        print("Starting HDR Raster Scan:")
+        print("Starting Single Exposure Raster Scan:")
 
         arch_prefix = "x86" if architecture() == 32 else "x64"
         dll_path = Path(__file__).parent / "prior" / arch_prefix / "PriorScientificSDK.dll"
@@ -63,14 +61,12 @@ def _():
         with prior_sdk as sdk_result:
             if not is_successful(sdk_result):
                 print(f"CRITICAL: Failed to initialize SDK session: {sdk_result.failure()}")
-                return
 
             controller = sdk_result.unwrap()
             connect_res = controller.connect(stage_com)
 
             if not is_successful(connect_res):
                 print(f"Connection failed: {connect_res.failure()}")
-                return
 
             stage = controller.stage        
             print("Stage connected. Initializing Camera...")
@@ -82,6 +78,9 @@ def _():
                     camera[EProp.DIRECTEMGAIN_MODE] = 2
                     camera[EProp.SENSITIVITY] = 255
 
+                    # Set the single exposure time once up front
+                    camera["exposure_time"] = exposure_time
+
                     xsteps = int(width / step)
                     ysteps = int(height / step)
                     nimages = xsteps * ysteps
@@ -89,42 +88,35 @@ def _():
 
                     print(f"Total Grid: {xsteps}x{ysteps} ({nimages} positions)")
 
+                    # Maintain original directory naming logic for organizational consistency
+                    bracket_dir = write_dir / f"all_bio_withDOE"
+                    bracket_dir.mkdir(exist_ok=True, parents=True)
+
                     for y in range(ysteps):
                         for x in range(xsteps):
 
-                            # --- HDR ACQUISITION BLOCK ---
-                            # For every physical position, take multiple exposures
-                            for exp_time in exposure_times:
-                                # 1. Update Exposure
-                                camera["exposure_time"] = exp_time
+                            # --- SINGLE EXPOSURE ACQUISITION BLOCK ---
+                            # Capture 1 frame per physical position
+                            with Stream(camera, 1) as stream:
+                                camera.start()
+                                for frame_buffer in stream:
+                                    frame = copy_frame(frame_buffer).astype(np.int32)
+                                    #mix = np.max(frame)
+                                    #diff = dark_frame.astype(np.int32) - shot_frame.astype(np.int32)
+                                    #diff = dark_frame.astype(np.int32)
+                                    diff = 0
+                                    frame = np.array(frame) - diff
+                                    #print(f"Max value of image is {mix}")
 
+                                    #frame = np.array(frame) - diff
+                                    frame = np.clip(frame, a_min = 1E-12, a_max = None)
+                                    #frame = normalize(frame)
+                                    frame = frame.astype('uint16')                                    
 
-                                # 2. Define path: write_dir / exp_0.01s / custom_0001.tiff
-                                bracket_dir = write_dir / f"exp_{exp_time}s"
-                                bracket_dir.mkdir(exist_ok=True)
-
-                                # 3. Capture Frame
-                                # We use a stream of 1 because we are at a single position
-                                with Stream(camera, 1) as stream:
-                                    camera.start()
-                                    for frame_buffer in stream:
-                                        frame = copy_frame(frame_buffer).astype(np.int32)
-                                        #mix = np.max(frame)
-                                        #diff = dark_frame.astype(np.int32) - shot_frame.astype(np.int32)
-                                        #diff = dark_frame.astype(np.int32)
-                                        diff = 0
-                                        frame = np.array(frame) - diff
-                                        #print(f"Max value of image is {mix}")
-
-                                        #frame = np.array(frame) - diff
-                                        frame = np.clip(frame, a_min = 1E-12, a_max = None)
-                                        #frame = normalize(frame)
-                                        frame = frame.astype('uint16')                                    
-
-                                        filename = f"{name_prefix}{imcount:04d}.tiff"
-                                        save_path = bracket_dir / filename
-                                        tiffile.imwrite(save_path, frame)
-                                    camera.stop()
+                                    filename = f"{name_prefix}{imcount:04d}.tiff"
+                                    save_path = bracket_dir / filename
+                                    tiffile.imwrite(save_path, frame)
+                                camera.stop()
                             # -----------------------------
 
                             imcount += 1
@@ -134,7 +126,6 @@ def _():
                                 slide = stage.move(step, 0)
                                 if not is_successful(slide):
                                     print(f"Stage move failed at {stage.position}")
-                                    return
 
                             # Carriage return at end of row
                             if x == xsteps - 1:
@@ -143,26 +134,28 @@ def _():
                                 slide = stage.move(xreset, step)
                                 if not is_successful(slide):
                                     print(f"Stage move failed at {stage.position}")
-                                    return
 
                             time.sleep(0.25)
+                        
+                    y_return_move = -1 * ysteps * step
+                    print(f"Grid scan complete. Returning stage to initial reference position (Stepping Y by {y_return_move} um)...")
+                
+                    return_slide = stage.move(0, y_return_move)
+                    if not is_successful(return_slide):
+                        print(f"Return to home position failed at final stage position: {stage.position}")
+                    else:
+                        print("Stage successfully returned to starting coordinates.")
+                    # ---------------------------------    
 
         print("Scan completed successfully!")
+    return (main,)
+
+
+@app.cell
+def _(main):
 
     if __name__ == "__main__":
         main()
-    return
-
-
-@app.cell
-def _():
-
-
-    return
-
-
-@app.cell
-def _():
     return
 
 
