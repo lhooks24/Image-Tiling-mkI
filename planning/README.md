@@ -5,6 +5,22 @@ opens the camera, moves either stage, changes illumination, or edits an existing
 scan script.  It is a decision aid for today's characterization and tomorrow's
 time budget.
 
+## Existing-suite run map
+
+The current `zstack_hdr_scan.py` accepts one HDR exposure list and one output
+base directory per execution.  It then performs a no-DOE pass, pauses for the
+manual DOE flip, and performs the paired with-DOE pass.  Consequently:
+
+* The **full plan** is four executions: all, green, blue, and red.  Each
+  execution includes both DOE states.
+* The **two-half-scan plan** is eight executions: cell type A then cell type B
+  for each of all, green, blue, and red.  Each execution includes both DOE
+  states and receives half the positions assigned to that color.
+
+Use the existing, known-good parameter editing workflow to select each final
+exposure list and destination before its execution.  This planning package does
+not change those parameters for you.
+
 ## 1. Preserve the acquisition state
 
 The acquisition suite was committed before this folder was added.  The commit is
@@ -99,4 +115,3 @@ handoffs; add `--setup-minutes` if that has not already been removed from the
 3. Confirm all intended frame counts and storage space before beginning.
 4. Save the reports, timing CSV, final chosen brackets, and scan parameters in
    the experiment notebook or alongside the destination dataset.
-
