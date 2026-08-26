@@ -33,11 +33,11 @@ def _():
 
     # --- HDR EXPOSURE SETTINGS ---
     # 15ms, 50ms, and 125ms in seconds
-    hdr_exposure_times = [0.015, 0.050, 0.125]
+    hdr_exposure_times = [0.0139, 0.050, 0.125, 0.25]
     pixel_gain = 255
 
     # --- DIRECTORY SETUP ---
-    base_dir = Path("C:/Users/ladmin/OneDrive - University of Utah/grad school/research/Super-Res/Data/08_21_26/all_dark/")
+    base_dir = Path("C:/Users/ladmin/OneDrive - University of Utah/grad school/research/Super-Res/Data/08_26_26/cell5_ND_exp/blue/")
     base_dir.mkdir(exist_ok=True, parents=True)
 
     no_doe_dir = base_dir / "noDOE"

@@ -1,0 +1,1847 @@
+{
+  "data_root": "C:\\Users\\ladmin\\OneDrive - University of Utah\\grad school\\research\\Super-Res\\Data\\08_26_26",
+  "tiff_files_found": 10692,
+  "frames_analyzed": 10692,
+  "conditions_analyzed": 40,
+  "skipped_files": [],
+  "conditions": [
+    {
+      "cell_type": "cell2",
+      "color": "all",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.18684005737304688,
+          "frames_with_any_saturation": 47,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.49530792236328125,
+          "frames_with_any_saturation": 72,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.692474365234375,
+          "frames_with_any_saturation": 76,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "all",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 16096.0,
+          "worst_saturated_fraction": 0.025791168212890625,
+          "frames_with_any_saturation": 11,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 44238.28400000022,
+          "worst_saturated_fraction": 0.24260711669921875,
+          "frames_with_any_saturation": 37,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.48148345947265625,
+          "frames_with_any_saturation": 61,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "blue",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.6795692443847656,
+          "frames_with_any_saturation": 77,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.8578758239746094,
+          "frames_with_any_saturation": 81,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.9830322265625,
+          "frames_with_any_saturation": 81,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "blue",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 56921.85700000002,
+          "worst_saturated_fraction": 0.1423492431640625,
+          "frames_with_any_saturation": 40,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.41811370849609375,
+          "frames_with_any_saturation": 63,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.61334228515625,
+          "frames_with_any_saturation": 78,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "green",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 38970.141000000236,
+          "worst_saturated_fraction": 0.04268646240234375,
+          "frames_with_any_saturation": 24,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.33139801025390625,
+          "frames_with_any_saturation": 57,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.6063766479492188,
+          "frames_with_any_saturation": 71,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "green",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 18398.999000000127,
+          "median_p999": 8755.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 50510.856000000145,
+          "median_p999": 22536.571000000054,
+          "worst_saturated_fraction": 4.9591064453125e-05,
+          "frames_with_any_saturation": 2,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 48944.714000000036,
+          "worst_saturated_fraction": 0.0170745849609375,
+          "frames_with_any_saturation": 35,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "red",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 9814.856000000145,
+          "median_p999": 5269.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 26945.138000000617,
+          "median_p999": 12239.714000000036,
+          "worst_saturated_fraction": 2.6702880859375e-05,
+          "frames_with_any_saturation": 2,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 58055.42800000007,
+          "median_p999": 25854.571000000054,
+          "worst_saturated_fraction": 0.000675201416015625,
+          "frames_with_any_saturation": 13,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2",
+      "color": "red",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 5387.0,
+          "median_p999": 3748.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 13075.568000000436,
+          "median_p999": 7266.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 28332.853000000527,
+          "median_p999": 14574.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "longer_exposure_test_required",
+      "provisional_use": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "reason": "The longest tested exposure is conservative, so the maximum useful long band is not established.",
+      "next_test_seconds": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "all",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 47193.57000000018,
+          "median_p999": 17340.70500000118,
+          "worst_saturated_fraction": 6.103515625e-05,
+          "frames_with_any_saturation": 1,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 51304.529000005394,
+          "worst_saturated_fraction": 0.14586257934570312,
+          "frames_with_any_saturation": 41,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.4580421447753906,
+          "frames_with_any_saturation": 78,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "all",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 23232.714000000036,
+          "median_p999": 7934.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65243.71100000042,
+          "median_p999": 21822.0,
+          "worst_saturated_fraction": 0.00087738037109375,
+          "frames_with_any_saturation": 7,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 47272.571000000054,
+          "worst_saturated_fraction": 0.2676658630371094,
+          "frames_with_any_saturation": 40,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "blue",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 8307.857000000018,
+          "median_p999": 5877.714000000036,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 23862.710000000545,
+          "median_p999": 15166.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 52286.71200000029,
+          "median_p999": 33569.856000000145,
+          "worst_saturated_fraction": 3.814697265625e-05,
+          "frames_with_any_saturation": 1,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "longer_exposure_test_required",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "reason": "The longest tested exposure is conservative, so the maximum useful long band is not established.",
+      "next_test_seconds": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "blue",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 5069.857000000018,
+          "median_p999": 4096.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 12463.571000000054,
+          "median_p999": 9048.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 26991.857000000018,
+          "median_p999": 19022.713000000163,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "longer_exposure_test_required",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "reason": "The longest tested exposure is conservative, so the maximum useful long band is not established.",
+      "next_test_seconds": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "green",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 57475.56600000069,
+          "median_p999": 21134.714000000036,
+          "worst_saturated_fraction": 0.000598907470703125,
+          "frames_with_any_saturation": 5,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 62363.28200000047,
+          "worst_saturated_fraction": 0.11459732055664062,
+          "frames_with_any_saturation": 49,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.4369926452636719,
+          "frames_with_any_saturation": 72,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "green",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 62116.0,
+          "median_p999": 32967.99900000013,
+          "worst_saturated_fraction": 0.000560760498046875,
+          "frames_with_any_saturation": 4,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.07895278930664062,
+          "frames_with_any_saturation": 72,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.3796043395996094,
+          "frames_with_any_saturation": 72,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "red",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.5
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 48927.71100000042,
+          "median_p999": 9420.28500000009,
+          "worst_saturated_fraction": 0.000335693359375,
+          "frames_with_any_saturation": 5,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 26858.558000001707,
+          "worst_saturated_fraction": 0.0033416748046875,
+          "frames_with_any_saturation": 24,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 57174.714000000036,
+          "worst_saturated_fraction": 0.0085296630859375,
+          "frames_with_any_saturation": 57,
+          "full_scale": 65535
+        },
+        "0.5": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.5406036376953125,
+          "frames_with_any_saturation": 81,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell2_ND",
+      "color": "red",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.5
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 10087.857000000018,
+          "median_p999": 4175.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 29376.561000001326,
+          "median_p999": 9310.28500000009,
+          "worst_saturated_fraction": 1.52587890625e-05,
+          "frames_with_any_saturation": 2,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 63385.8540000004,
+          "median_p999": 19764.28500000009,
+          "worst_saturated_fraction": 0.0008392333984375,
+          "frames_with_any_saturation": 11,
+          "full_scale": 65535
+        },
+        "0.5": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 63489.714000000036,
+          "worst_saturated_fraction": 0.24173355102539062,
+          "frames_with_any_saturation": 64,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.5
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2_ND_exp",
+      "color": "blue",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 9005.713000000163,
+          "median_p999": 5562.5710000000545,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 25950.857000000018,
+          "median_p999": 14242.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 57257.13300000125,
+          "median_p999": 30604.141000000236,
+          "worst_saturated_fraction": 0.000438690185546875,
+          "frames_with_any_saturation": 3,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 54252.99700000038,
+          "worst_saturated_fraction": 0.007537841796875,
+          "frames_with_any_saturation": 37,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2_ND_exp",
+      "color": "blue",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 5149.714000000036,
+          "median_p999": 3943.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 13051.142000000109,
+          "median_p999": 8536.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 28762.138000000617,
+          "median_p999": 17896.428000000073,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 52193.71300000016,
+          "median_p999": 32358.714000000036,
+          "worst_saturated_fraction": 1.52587890625e-05,
+          "frames_with_any_saturation": 1,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "longer_exposure_test_required",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "reason": "The longest tested exposure is conservative, so the maximum useful long band is not established.",
+      "next_test_seconds": [
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "cell_type": "cell2_ND_exp",
+      "color": "red",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 16023.997000000381,
+          "median_p999": 9185.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 48517.13600000087,
+          "median_p999": 26402.28500000009,
+          "worst_saturated_fraction": 0.0003509521484375,
+          "frames_with_any_saturation": 5,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 56997.14200000011,
+          "worst_saturated_fraction": 0.014408111572265625,
+          "frames_with_any_saturation": 43,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.0984039306640625,
+          "frames_with_any_saturation": 76,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell2_ND_exp",
+      "color": "red",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 7679.713000000163,
+          "median_p999": 3983.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 21595.998000000254,
+          "median_p999": 8406.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 47516.135000001,
+          "median_p999": 17424.428000000073,
+          "worst_saturated_fraction": 0.0001983642578125,
+          "frames_with_any_saturation": 4,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 31239.56900000031,
+          "worst_saturated_fraction": 0.001739501953125,
+          "frames_with_any_saturation": 14,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "all",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 13767.714000000036,
+          "worst_saturated_fraction": 0.061981201171875,
+          "frames_with_any_saturation": 27,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 38242.28000000073,
+          "worst_saturated_fraction": 0.2655792236328125,
+          "frames_with_any_saturation": 33,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.46170806884765625,
+          "frames_with_any_saturation": 51,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "all",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 62459.0,
+          "median_p999": 7446.999000000127,
+          "worst_saturated_fraction": 0.000774383544921875,
+          "frames_with_any_saturation": 10,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 19606.856000000145,
+          "worst_saturated_fraction": 0.08235549926757812,
+          "frames_with_any_saturation": 27,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 42851.85300000053,
+          "worst_saturated_fraction": 0.22519683837890625,
+          "frames_with_any_saturation": 30,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "blue",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.35687255859375,
+          "frames_with_any_saturation": 43,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.6117210388183594,
+          "frames_with_any_saturation": 53,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.8843154907226562,
+          "frames_with_any_saturation": 59,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "blue",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 8063.285000000091,
+          "worst_saturated_fraction": 0.024127960205078125,
+          "frames_with_any_saturation": 25,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 21119.857000000018,
+          "worst_saturated_fraction": 0.20294189453125,
+          "frames_with_any_saturation": 28,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 46525.28500000009,
+          "worst_saturated_fraction": 0.35282135009765625,
+          "frames_with_any_saturation": 40,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "green",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 62968.99600000051,
+          "worst_saturated_fraction": 0.25518035888671875,
+          "frames_with_any_saturation": 44,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.4871788024902344,
+          "frames_with_any_saturation": 56,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.7552452087402344,
+          "frames_with_any_saturation": 59,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "green",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 17242.571000000054,
+          "worst_saturated_fraction": 0.0027313232421875,
+          "frames_with_any_saturation": 14,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 49124.714000000036,
+          "worst_saturated_fraction": 0.11870574951171875,
+          "frames_with_any_saturation": 39,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.35903167724609375,
+          "frames_with_any_saturation": 51,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "red",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 15808.142000000109,
+          "worst_saturated_fraction": 0.06285858154296875,
+          "frames_with_any_saturation": 25,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 43727.14200000011,
+          "worst_saturated_fraction": 0.23499298095703125,
+          "frames_with_any_saturation": 30,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.4732208251953125,
+          "frames_with_any_saturation": 47,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5",
+      "color": "red",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 62771.571000000054,
+          "median_p999": 4136.714000000036,
+          "worst_saturated_fraction": 0.000762939453125,
+          "frames_with_any_saturation": 3,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 8572.857000000018,
+          "worst_saturated_fraction": 0.011348724365234375,
+          "frames_with_any_saturation": 9,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 17859.571000000054,
+          "worst_saturated_fraction": 0.03009033203125,
+          "frames_with_any_saturation": 18,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "all",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 51959.13900000049,
+          "median_p999": 13292.714000000036,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 38456.42600000033,
+          "worst_saturated_fraction": 0.0619354248046875,
+          "frames_with_any_saturation": 21,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.21955108642578125,
+          "frames_with_any_saturation": 60,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "all",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 25877.428000000073,
+          "median_p999": 7116.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 19126.28500000009,
+          "worst_saturated_fraction": 0.004299163818359375,
+          "frames_with_any_saturation": 9,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 41630.714000000036,
+          "worst_saturated_fraction": 0.10844802856445312,
+          "frames_with_any_saturation": 22,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "blue",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 10364.857000000018,
+          "median_p999": 5981.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 30398.0,
+          "median_p999": 15558.999000000127,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65278.57000000018,
+          "median_p999": 34027.57000000018,
+          "worst_saturated_fraction": 0.000942230224609375,
+          "frames_with_any_saturation": 13,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "blue",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 5750.0,
+          "median_p999": 4053.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 14867.428000000073,
+          "median_p999": 9003.428000000073,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 32654.71200000029,
+          "median_p999": 18794.571000000054,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "longer_exposure_test_required",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "reason": "The longest tested exposure is conservative, so the maximum useful long band is not established.",
+      "next_test_seconds": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "green",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 57953.56600000069,
+          "median_p999": 22235.714000000036,
+          "worst_saturated_fraction": 0.0003814697265625,
+          "frames_with_any_saturation": 7,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 62723.57000000018,
+          "worst_saturated_fraction": 0.0861663818359375,
+          "frames_with_any_saturation": 51,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.3866119384765625,
+          "frames_with_any_saturation": 67,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "green",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 31799.283000000345,
+          "median_p999": 8504.0,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 23687.571000000054,
+          "worst_saturated_fraction": 0.005023956298828125,
+          "frames_with_any_saturation": 13,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 50675.42800000007,
+          "worst_saturated_fraction": 0.05352783203125,
+          "frames_with_any_saturation": 41,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "red",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 4496.0,
+          "worst_saturated_fraction": 0.00150299072265625,
+          "frames_with_any_saturation": 5,
+          "full_scale": 65535
+        },
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 21100.0,
+          "worst_saturated_fraction": 0.24871444702148438,
+          "frames_with_any_saturation": 24,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 10262.142000000109,
+          "worst_saturated_fraction": 0.08415603637695312,
+          "frames_with_any_saturation": 9,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 21517.857000000018,
+          "worst_saturated_fraction": 0.242401123046875,
+          "frames_with_any_saturation": 18,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5_ND",
+      "color": "red",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.015,
+        0.05,
+        0.125
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 29508.857000000018,
+          "median_p999": 3518.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.015": {
+          "frame_count": 81,
+          "worst_p999": 54205.85500000027,
+          "median_p999": 4587.857000000018,
+          "worst_saturated_fraction": 3.814697265625e-06,
+          "frames_with_any_saturation": 2,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 6866.285000000091,
+          "worst_saturated_fraction": 0.009403228759765625,
+          "frames_with_any_saturation": 9,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 13629.714000000036,
+          "worst_saturated_fraction": 0.10831069946289062,
+          "frames_with_any_saturation": 14,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.015,
+        0.05,
+        0.125
+      ],
+      "longest_conservative_exposure_seconds": 0.015,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND_exp",
+      "color": "blue",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 19994.426000000327,
+          "median_p999": 8618.28500000009,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 59170.14200000011,
+          "median_p999": 25110.713000000163,
+          "worst_saturated_fraction": 0.0002899169921875,
+          "frames_with_any_saturation": 9,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 55003.71200000029,
+          "worst_saturated_fraction": 0.017547607421875,
+          "frames_with_any_saturation": 42,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.0653228759765625,
+          "frames_with_any_saturation": 54,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND_exp",
+      "color": "blue",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 10598.0,
+          "median_p999": 5437.714000000036,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 30982.141000000236,
+          "median_p999": 14083.999000000127,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 31229.710000000545,
+          "worst_saturated_fraction": 0.001209259033203125,
+          "frames_with_any_saturation": 16,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 55948.85700000002,
+          "worst_saturated_fraction": 0.018527984619140625,
+          "frames_with_any_saturation": 45,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "longest_conservative_exposure_seconds": 0.05,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    },
+    {
+      "cell_type": "cell5_ND_exp",
+      "color": "red",
+      "doe_state": "noDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 18894.0,
+          "worst_saturated_fraction": 0.07088851928710938,
+          "frames_with_any_saturation": 14,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 54306.71200000029,
+          "worst_saturated_fraction": 0.1578216552734375,
+          "frames_with_any_saturation": 44,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.2588653564453125,
+          "frames_with_any_saturation": 57,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 65535.0,
+          "worst_saturated_fraction": 0.3719749450683594,
+          "frames_with_any_saturation": 66,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "shorter_exposure_required",
+      "provisional_use": null,
+      "reason": "No tested exposure satisfies the conservative clipping criteria."
+    },
+    {
+      "cell_type": "cell5_ND_exp",
+      "color": "red",
+      "doe_state": "withDOE",
+      "tested_exposures_seconds": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "per_exposure": {
+        "0.0139": {
+          "frame_count": 81,
+          "worst_p999": 17530.42400000058,
+          "median_p999": 5084.857000000018,
+          "worst_saturated_fraction": 0.0,
+          "frames_with_any_saturation": 0,
+          "full_scale": 65535
+        },
+        "0.05": {
+          "frame_count": 81,
+          "worst_p999": 52989.39800000389,
+          "median_p999": 12295.571000000054,
+          "worst_saturated_fraction": 0.000583648681640625,
+          "frames_with_any_saturation": 5,
+          "full_scale": 65535
+        },
+        "0.125": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 26456.857000000018,
+          "worst_saturated_fraction": 0.002155303955078125,
+          "frames_with_any_saturation": 26,
+          "full_scale": 65535
+        },
+        "0.25": {
+          "frame_count": 81,
+          "worst_p999": 65535.0,
+          "median_p999": 47199.14200000011,
+          "worst_saturated_fraction": 0.004138946533203125,
+          "frames_with_any_saturation": 35,
+          "full_scale": 65535
+        }
+      },
+      "criteria": "p99.9 <= 85% full scale and <= 0.01% saturated pixels in every frame",
+      "status": "tested_bracket_available",
+      "provisional_use": [
+        0.0139,
+        0.05,
+        0.125,
+        0.25
+      ],
+      "longest_conservative_exposure_seconds": 0.0139,
+      "reason": "A longer tested exposure fails clipping criteria; inspect frame content before final selection."
+    }
+  ],
+  "warning": "Numerical clipping does not validate diffraction-feature fidelity; inspect representative frames before choosing bands."
+}

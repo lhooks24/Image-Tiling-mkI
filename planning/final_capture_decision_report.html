@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HDR Z-Stack Capture Decision Report — 26 Aug 2026</title>
+  <style>
+    :root { --ink:#1d2733; --muted:#5c6875; --line:#d8dee6; --accent:#075985; --warn:#9a3412; --paper:#fff; }
+    body { margin:0; background:#eef2f6; color:var(--ink); font:15px/1.5 Arial, sans-serif; }
+    main { max-width:980px; margin:28px auto; padding:42px 52px; background:var(--paper); box-shadow:0 2px 16px #0002; }
+    h1 { font-size:28px; line-height:1.2; margin:0 0 4px; } h2 { margin-top:34px; color:var(--accent); font-size:20px; border-bottom:1px solid var(--line); padding-bottom:5px; }
+    h3 { margin:22px 0 6px; font-size:16px; } .sub { color:var(--muted); margin:0; } .callout { border-left:4px solid var(--accent); background:#f0f9ff; padding:12px 15px; margin:18px 0; }
+    .warning { border-left-color:var(--warn); background:#fff7ed; } table { border-collapse:collapse; width:100%; margin:12px 0 20px; } th,td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; } th { background:#f4f7fa; }
+    code,.eq { font-family:Consolas, monospace; } .eq { display:block; padding:10px 14px; background:#f6f8fa; border:1px solid var(--line); margin:10px 0; overflow:auto; }
+    .pending { color:var(--warn); font-weight:bold; } @media print { body { background:#fff; } main { box-shadow:none; margin:0; max-width:none; } }
+  </style>
+</head>
+<body><main>
+  <h1>HDR Z-Stack Capture Decision Report</h1>
+  <p class="sub">Finalized 26 August 2026 · Dataset root: <code>08_26_26</code> · Based on 10,692 analyzed TIFFs</p>
+
+  <div class="callout"><strong>Final decision.</strong> Use the faster three-band bracket for all/green and the longer-range three-band bracket for blue/red. The final blue/red tests establish 250 ms as the useful long band; 500 ms is not retained.</div>
+
+  <h2>1. Controlled acquisition settings</h2>
+  <table><tr><th>Control</th><th>Decision</th></tr>
+    <tr><td>Camera configuration</td><td>Keep the existing Direct EM-gain mode and sensitivity setting fixed for every condition. Fixed gain means identical gain—not zero gain.</td></tr>
+    <tr><td>Blue excitation</td><td>OD 2.0 ND filter, fixed for all samples.</td></tr>
+    <tr><td>Green excitation</td><td>OD 1.0 ND filter, fixed for all samples.</td></tr>
+    <tr><td>Red excitation</td><td>No ND filter, fixed for all samples.</td></tr>
+    <tr><td>Focus</td><td>Use a measured, fixed focus offset per color relative to a well reference plane. Apply the same color offset to both cell types; record it.</td></tr>
+  </table>
+
+  <h2>2. HDR selection model</h2>
+  <p>For a pixel before clipping, the recorded digital value can be represented as:</p>
+  <span class="eq">D(x,y) = B + G · η · Φ(x,y) · t + n(x,y), &nbsp; 0 ≤ D ≤ D<sub>max</sub> = 65,535</span>
+  <p>Here <i>B</i> is the offset/background, <i>G</i> is the fixed camera gain, <i>η</i> is system conversion efficiency, <i>Φ</i> is photon flux, <i>t</i> is exposure time, and <i>n</i> is noise. An ND filter changes flux by:</p>
+  <span class="eq">Φ<sub>after ND</sub> = Φ<sub>before ND</sub> · 10<sup>−OD</sup></span>
+  <p>A valid HDR set contains: (i) a short exposure that preserves relevant bright PSF/diffraction content, (ii) a middle exposure overlapping the short and long bands, and (iii) a long exposure that raises dim DOE features above noise. Long-band clipping is permissible only when the short band contains the clipped relevant information.</p>
+  <span class="eq">t<sub>short</sub> = 13.9 ms; &nbsp; t<sub>mid</sub> = 50 ms; &nbsp; t<sub>long candidate</sub> ∈ {125 ms, 250 ms}</span>
+  <p>Screening statistics used in the automated report are the worst per-frame 99.9th percentile and the fraction of pixels at <code>D<sub>max</sub></code>. They are screening evidence only. Final acceptance must inspect whether clipped pixels occur in the scientifically relevant PSF/diffraction region.</p>
+
+  <h2>3. Final bracket decisions</h2>
+  <p>The fixed-ND configuration made 13.9 ms completely unclipped in the final blue tests for both cells and both DOE states. The 250 ms band raised dim with-DOE content while allowing the short band to preserve bright structure. A three-band bracket is selected to protect scan time.</p>
+  <table><tr><th>Cell</th><th>Color</th><th>Final HDR bands</th><th>Evidence and decision rule</th></tr>
+    <tr><td>cell2</td><td>all</td><td><code>13.9, 50, 125 ms</code></td><td>13.9 ms is a clean short band; 125 ms supplies the long band. Retain the faster tested set.</td></tr>
+    <tr><td>cell2</td><td>blue</td><td><code>13.9, 50, 250 ms</code></td><td>13.9 and 50 ms were unclipped in all 162 paired test frames. 250 ms improves dim with-DOE signal; clipping in its bright no-DOE outliers is recoverable from the short band.</td></tr>
+    <tr><td>cell2</td><td>green</td><td><code>13.9, 50, 125 ms</code></td><td>Retain the tested set. The minimum band had small residual outliers; inspect/flag any frame where clipped pixels fall in required PSF content.</td></tr>
+    <tr><td>cell2</td><td>red</td><td><code>13.9, 50, 250 ms</code></td><td>13.9 ms was unclipped in both DOE states. 250 ms is the needed dim long band; 500 ms is excluded because it substantially clipped both states.</td></tr>
+    <tr><td>cell5</td><td>all</td><td><code>13.9, 50, 125 ms</code></td><td>13.9 ms was unclipped in both DOE states; retain the faster tested set.</td></tr>
+    <tr><td>cell5</td><td>blue</td><td><code>13.9, 50, 250 ms</code></td><td>13.9 ms was unclipped in both DOE states. 250 ms provides the useful dim long band; bright clipping is handled by the short band.</td></tr>
+    <tr><td>cell5</td><td>green</td><td><code>13.9, 50, 125 ms</code></td><td>Retain the tested set, with the same required review/flagging of the small no-DOE short-band outliers.</td></tr>
+    <tr><td>cell5</td><td>red</td><td><code>13.9, 50, 250 ms</code></td><td>250 ms supplies dim with-DOE content. <strong>Limitation:</strong> 14 of 81 no-DOE 13.9 ms test frames clipped (worst 7.09% of pixels), so those high-density fields cannot be fully recovered under the fixed no-ND/minimum-exposure constraint.</td></tr>
+  </table>
+  <p>For each scan, HDR reconstruction must prefer the longest non-saturated value per pixel. Formally, for bands <i>i</i> with exposure <i>t</i>, choose the unsaturated measurement with the largest exposure and normalize to a common exposure scale:</p>
+  <span class="eq">H(x,y) = D<sub>k</sub>(x,y) · t<sub>ref</sub>/t<sub>k</sub>, &nbsp; k = arg max<sub>i: D<sub>i</sub>(x,y) &lt; D<sub>sat</sub></sub> t<sub>i</sub></span>
+
+  <h2>4. Timing model</h2>
+  <span class="eq">T<sub>pass</sub> = N<sub>position</sub> · N<sub>z</sub> · [Σ<sub>i=1..b</sub>(t<sub>i</sub> + o<sub>camera,i</sub>) + t<sub>z-settle</sub>] + T<sub>XY</sub> + T<sub>write</sub></span>
+  <p>Measured paired no-DOE/with-DOE time per XY position is 10.4 seconds for all or green and 16.6–16.7 seconds for blue or red. Thus the complete four-color acquisition costs 54.10 seconds/position for cell2 and 54.32 seconds/position for cell5. These values include camera readout and TIFF writing, but exclude operator transitions.</p>
+  <span class="eq">T<sub>usable</sub> = (17:30 − 08:00) − 30 min buffer − T<sub>manual transitions</sub></span>
+
+  <h2>5. Final capture plans</h2>
+  <p>All plans use 40 µm XY steps, 9 Z planes (10 µm total range, 1.25 µm spacing), and the bracket table above. The schedule reserves 30 minutes for operator transitions in a full plan, 60 minutes in a two-half plan, and the requested 30-minute protected completion buffer.</p>
+  <table><tr><th>Plan</th><th>Grid and positions</th><th>Imaging time</th><th>Schedule result</th></tr>
+    <tr><td>Full cell2</td><td>23 × 24 = <strong>552 positions/color</strong>; set <code>width=920</code>, <code>height=960</code>.</td><td>497.7 min</td><td>497.7 min imaging + 30 min operator transitions + 30 min buffer = 557.7 min; planned finish ≈ 17:18.</td></tr>
+    <tr><td>Full cell5</td><td>23 × 24 = <strong>552 positions/color</strong>; set <code>width=920</code>, <code>height=960</code>.</td><td>499.7 min</td><td>499.7 min imaging + 30 min operator transitions + 30 min buffer = 559.7 min; planned finish ≈ 17:20. Apply the cell5-red saturation quality flag.</td></tr>
+    <tr><td>Two half-scans</td><td>For each cell: 13 × 20 = <strong>260 positions/color</strong>; set <code>width=520</code>, <code>height=800</code>. Total = 520 positions/color across both cells.</td><td>469.1 min</td><td>469.1 min imaging + 60 min operator transitions + 30 min buffer = 559.1 min; planned finish ≈ 17:19.</td></tr>
+  </table>
+  <div class="callout warning"><strong>Cell5-red quality condition.</strong> With no red ND filter and a 13.9 ms camera minimum, a subset of high-density no-DOE fields clips in the short band. No capture plan can recover those pixels. For a strict high-fidelity dataset, record and exclude/flag those affected frames or positions during curation; do not silently treat them as equivalent to unsaturated examples.</div>
+</main></body></html>

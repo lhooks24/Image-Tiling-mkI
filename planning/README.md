@@ -60,18 +60,21 @@ planning/capture_inputs/cell_A_green_withDOE/exp_0.020s/frame.tiff
 planning/capture_inputs/cell_A_green_withDOE/exp_0.040s/frame.tiff
 ```
 
-Analyze a condition with:
+The checked-in scripts now default to the permitted `08_26_26` dataset root and
+discover every `cell/color/DOE-state/exposure` condition automatically. Run the
+HDR analysis once with:
 
 ```
-python planning/hdr_bracket_analysis.py planning/capture_inputs/cell_A_green_withDOE
+python planning/hdr_bracket_analysis.py
 ```
 
-The command writes a `hdr_report.csv` and `hdr_report.json` beside the input
-folder.  The recommendation is deliberately conservative: it picks the longest
-non-clipping exposure and derives a three-exposure 4x ladder below it.  Review
-the report and thumbnail/frames yourself before deciding; diffraction patterns
-may have scientifically relevant bright features that a global percentile does
-not distinguish from unwanted clipping.
+The command writes a full-frame CSV and a per-condition JSON report in
+`planning/reports/`. It does not write into the image-data tree. Its decision is
+deliberately evidence-labelled: it flags whether shorter or longer exposures
+must be tested rather than inventing an unmeasured bracket. Review the report
+and representative frames yourself before deciding; diffraction patterns may
+have scientifically relevant bright features that a global percentile does not
+distinguish from unwanted clipping.
 
 ## 3. Measure scan time, do not estimate it
 
@@ -87,24 +90,26 @@ planes and HDR exposures included.  Do not use the raw sum of exposure times.
 
 ## 4. Calculate tomorrow's capacity
 
-The usable 8:00 AM–5:30 PM window after the requested 30-minute buffer is 510
-minutes.  Example, after entering your measured slowest per-pass time:
+The usable 8:00 AM–5:30 PM window after the requested 30-minute buffer is 540
+minutes. The timing planner automatically reads each condition's TIFF write
+timestamps and estimates per-position timing. Run it once:
 
 ```
-python planning/capture_time_planner.py --seconds-per-position-pass 18.4
+python planning/capture_time_planner.py
 ```
 
-It reports both decision cases:
+It writes both a pass-level timing CSV and a capacity JSON report in
+`planning/reports/`, and reports both decision cases:
 
 * **Full scan:** one cell type, each of all/green/blue/red acquired no-DOE and
   with-DOE.
 * **Two half-scans:** the same total positions per color split equally between
   two cell types, with a separately configurable manual well-change allowance.
 
-The reported position limit is an upper bound.  Set `--manual-minutes` to the
-time you intend to reserve for DOE flips, sample/well changes, refocusing, and
-handoffs; add `--setup-minutes` if that has not already been removed from the
-510-minute window.
+The reported limit is an upper bound because filesystem timestamps exclude time
+before the first image and after the final image. Use a slower stopwatch result
+instead if available. Set `--manual-minutes-full`, `--manual-minutes-split`, or
+`--setup-minutes` to change those explicit allowances.
 
 ## Decision checklist before tomorrow
 
