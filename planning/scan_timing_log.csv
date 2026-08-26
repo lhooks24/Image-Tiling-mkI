@@ -1,0 +1,2 @@
+date,cell_type,color_or_illumination,doe_state,exposures_ms,z_range_um,z_step_um,z_planes,xy_positions,run_number,elapsed_seconds,seconds_per_position,notes
+YYYY-MM-DD,cell_A,green,noDOE,"15;50;125",10,1.25,9,1,1,,,"start at first position prompt; stop after position completes"
